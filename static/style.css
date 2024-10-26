@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+}

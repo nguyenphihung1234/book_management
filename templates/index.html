@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Library Transactions</h1>
+        <div class="mb-3">
+            <a href="{{ url_for('add_book') }}" class="btn btn-primary">Add Book</a>
+            <a href="{{ url_for('add_member') }}" class="btn btn-primary">Add Member</a>
+            <a href="{{ url_for('report') }}" class="btn btn-info">View Report</a>
+            <a href="{{ url_for('add_transaction') }}" class="btn btn-success">Add Transaction</a>
+
+        </div>
+        
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Member Name</th>
+                    <th>Book Title</th>
+                    <th>Borrow Date</th>
+                    <th>Return Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction[0] }}</td>
+                    <td>{{ transaction[1] }}</td>
+                    <td>{{ transaction[2] }}</td>
+                    <td>{{ transaction[3] }}</td>
+                    <td>{{ transaction[4] }}</td>
+                    <td>{{ transaction[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
