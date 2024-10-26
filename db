@@ -1,0 +1,27 @@
+CREATE TABLE members (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    birthdate DATE,
+    address VARCHAR(255)
+);
+
+CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    author VARCHAR(255),
+    publish_date DATE
+);
+
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    member_id INT,
+    book_id INT,
+    borrow_date DATE,
+    return_date DATE,
+    status VARCHAR(50),
+    FOREIGN KEY (member_id) REFERENCES members(id) ON DELETE CASCADE,
+    FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
+);
+select * from books
+select * from members
+select * from transactions
