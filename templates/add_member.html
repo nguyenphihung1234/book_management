@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm Thành Viên</title>
+</head>
+<body>
+    <h2>Thêm Thành Viên</h2>
+    <form action="{{ url_for('add_member') }}" method="POST">
+        <label for="name">Tên:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="birth_date">Ngày Sinh:</label><br>
+        <input type="date" id="birth_date" name="birth_date" required><br><br>
+
+        <label for="address">Địa Chỉ:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <button type="submit">Thêm Thành Viên</button>
+    </form>
+    <a href="{{ url_for('index') }}">Quay lại</a>
+</body>
+</html>

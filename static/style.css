@@ -1,0 +1,81 @@
+/* Đặt nền cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiêu đề trang */
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Tạo kiểu cho bảng */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Phong cách cho tiêu đề của bảng */
+table thead th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+/* Phong cách cho hàng dữ liệu */
+table tbody td {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
+/* Đổi màu hàng khi rê chuột */
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tạo viền cho các ô trong bảng */
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Tạo khoảng cách đều giữa các cột */
+table td, table th {
+    text-align: center;
+}
+
+/* Đổi màu cho các hàng chẵn */
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Phong cách cho nút thêm dữ liệu */
+.add-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.add-button:hover {
+    background-color: #357ABD;
+}
